@@ -12,19 +12,23 @@ sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/ka
 
 Updated system packages:
 sudo apt update && sudo apt upgrade
+
 ![image](https://github.com/user-attachments/assets/3cb5a30d-fec5-413e-9773-d1913b120a33)
 
 
 Installed OpenVAS and dependencies:
 sudo apt install openvas
 
+![image](https://github.com/user-attachments/assets/a1700af2-e71a-4df6-b8ac-76b5fc467339)
+
 Faced too many errors while installing openvas as shown in screenshot below
+
 ![image](https://github.com/user-attachments/assets/592e3657-defc-436a-b034-4be106ba0153)
 ![image](https://github.com/user-attachments/assets/7dc68878-857e-4bee-956d-e130767fdd20)
-![image](https://github.com/user-attachments/assets/0904ef26-b88e-472f-9622-8a3fc2a37cfe)
 
 Took me awhile but running below commands solver the issue
 sudo apt-get install kali-desktop-core
+
 ![image](https://github.com/user-attachments/assets/d3288eea-0c26-4b00-a61a-58816a4d2559)
 ![image](https://github.com/user-attachments/assets/afba0940-1a8a-4076-858e-021f3751eadf)
 
@@ -32,6 +36,7 @@ Ran initial setup:
 sudo gvm-setup
 This configured the database, services, and fetched vulnerability data.
 This installation process took along time about 30-45 mins.
+
 ![image](https://github.com/user-attachments/assets/be5c2ec2-d058-41a1-a8c3-d1f6be80e1e1)
 
 
