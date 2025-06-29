@@ -11,12 +11,14 @@ manually download and install the new key
 sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/kali-archive-keyring.gpg
 
 Updated system packages:
+
 sudo apt update && sudo apt upgrade
 
 ![image](https://github.com/user-attachments/assets/3cb5a30d-fec5-413e-9773-d1913b120a33)
 
 
 Installed OpenVAS and dependencies:
+
 sudo apt install openvas
 
 ![image](https://github.com/user-attachments/assets/a1700af2-e71a-4df6-b8ac-76b5fc467339)
@@ -27,6 +29,7 @@ Faced too many errors while installing openvas as shown in screenshot below
 ![image](https://github.com/user-attachments/assets/7dc68878-857e-4bee-956d-e130767fdd20)
 
 Took me awhile but running below commands solver the issue
+
 sudo apt-get install kali-desktop-core
 
 ![image](https://github.com/user-attachments/assets/d3288eea-0c26-4b00-a61a-58816a4d2559)
@@ -35,13 +38,20 @@ sudo apt-get install kali-desktop-core
 Ran initial setup:
 sudo gvm-setup
 This configured the database, services, and fetched vulnerability data.
-This installation process took along time about 30-45 mins.
+This installation process took along time about 45-60 mins.
 
 ![image](https://github.com/user-attachments/assets/be5c2ec2-d058-41a1-a8c3-d1f6be80e1e1)
+
+Faced an error needed to alter database version
+
+![image](https://github.com/user-attachments/assets/c41ce6f4-7d9b-4fec-99a9-9b5a291d45f8)
 
 
 Checked the installation:
 sudo gvm-check-setup
+
+![image](https://github.com/user-attachments/assets/d412cd7e-cc28-4dcf-813f-a4232a09fd24)
+
 
 **Step 2: Setting Up Scan Target**
 Logged into the Greenbone Security Assistant web UI at https://localhost:9392.
@@ -69,42 +79,24 @@ Banner grabbing
 CVE checking based on plugin database
 Verified progress from dashboard.
 
-**Step 5: Review the Report for Vulnerabilities**
-After completion:
+**Step 5: Reviewing the Report**
+Once complete, clicked on the task to open the Report.
+Observed a color-coded summary:
+Red: Critical vulnerabilities
+Orange: High
+Yellow: Medium
+Green: Low
+Blue: Log/Info
 
-Opened the Scan Results Report.
-Observed vulnerabilities classified into categories:
-Critical
-High
-Medium
-Low
-Informational
-
-Each vulnerability listed:
-Plugin Name
-CVE ID
-Risk Factor
-Description
-Solution
-Affected Ports and Services
-
-**Step 6: Research Simple Fixes or Mitigations**
-For top vulnerabilities (Critical/High):
-
-Common mitigation techniques:
-Patching outdated software
-Disabling insecure protocols (e.g., SMBv1)
-Updating misconfigured services
-Changing default passwords
-Disabling unused ports/services
 
 **Results Summary**
-Total Vulnerabilities Found: 18
-Critical: 2
-High: 5
-Medium: 6
-Low: 3
-Informational: 2
+Summary of Findings
+Risk Level	Number of Vulnerabilities
+Critical	0
+High	3
+Medium	4
+Low	6
+Info	5
 
 **Conclusion**
 This project has been instrumental in bridging theoretical knowledge of cybersecurity with practical hands-on experience. I now understand how to identify and prioritize vulnerabilities in real systems and how crucial vulnerability management is to maintaining secure IT infrastructure.
