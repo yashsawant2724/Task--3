@@ -49,8 +49,11 @@ Faced an error needed to alter database version
 
 Checked the installation:
 sudo gvm-check-setup
-
 ![image](https://github.com/user-attachments/assets/d412cd7e-cc28-4dcf-813f-a4232a09fd24)
+
+Launched the openvas
+sudo gvm-start
+![image](https://github.com/user-attachments/assets/45d5e774-97a3-4981-8e60-05e960b0b910)
 
 
 **Step 2: Setting Up Scan Target**
@@ -61,6 +64,8 @@ Name: "Localhost Vulnerability Test"
 Host: 127.0.0.1
 Port List: All TCP and UDP (default)
 Saved the target.
+![image](https://github.com/user-attachments/assets/fe0b87fd-47d6-46c1-925d-7acb3b7c1a0a)
+
 
 **Step 3: Launching a Full Vulnerability Scan**
 Navigated to Scans → Tasks → New Task.
@@ -69,6 +74,8 @@ Name: "Full Localhost Scan"
 Scan Config: Full and Fast
 Target: Localhost (created earlier)
 Started the scan by clicking Start Task.
+![image](https://github.com/user-attachments/assets/068c405f-aaa1-4356-9318-4b6d0e7a3adc)
+
 
 **Step 4: Wait for Scan to Complete**
 Duration: Approximately 45–60 minutes
@@ -88,15 +95,6 @@ Yellow: Medium
 Green: Low
 Blue: Log/Info
 
-
-**Results Summary**
-Summary of Findings
-Risk Level	Number of Vulnerabilities
-Critical	0
-High	3
-Medium	4
-Low	6
-Info	5
 
 **Conclusion**
 This project has been instrumental in bridging theoretical knowledge of cybersecurity with practical hands-on experience. I now understand how to identify and prioritize vulnerabilities in real systems and how crucial vulnerability management is to maintaining secure IT infrastructure.
